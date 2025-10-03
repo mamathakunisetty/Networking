@@ -1,0 +1,13 @@
+# Troubleshooting Networking Issues
+
+- Check open ports:
+  netstat -tulnp
+
+- Test connectivity:
+  curl -v http://server-ip:port
+
+- Trace route:
+  traceroute server-ip
+
+- Verify firewall rules:
+  sudo iptables -L -n -v

@@ -1,0 +1,31 @@
+networking/
+ ├── README.md
+ ├── docs/
+ │    ├── concepts.md
+ │    ├── bg-groups.md
+ │    ├── nsg.md
+ │    ├── npg.md
+ │    ├── load-balancer.md
+ │    ├── firewall.md
+ │    └── troubleshooting.md
+ ├── commands/
+ │    ├── azure-nsg.md
+ │    ├── aws-security-groups.md
+ │    ├── firewall-iptables.md
+ │    ├── loadbalancer-setup.md
+ │    └── diagnostic.md
+ ├── configs/
+ │    ├── nsg-sample.json
+ │    ├── firewall-rules.yml
+ │    ├── lb-config.json
+ │    └── vpn-config.conf
+ ├── scripts/
+ │    ├── create-nsg.sh
+ │    ├── add-firewall-rules.sh
+ │    ├── setup-loadbalancer.sh
+ │    └── monitor-health.sh
+ ├── examples/
+ │    ├── network-scenario-1.md
+ │    ├── scenario-2-with-vpn.md
+ │    └── hybrid-cloud-setup.md
+ └── .gitignore

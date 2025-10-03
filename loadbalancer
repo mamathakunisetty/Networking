@@ -1,0 +1,28 @@
+# Load Balancer Setup
+
+## Create Backend Pool
+az network lb address-pool create \
+  --resource-group MyResourceGroup \
+  --lb-name MyLB \
+  --name MyBackendPool
+
+## Create Health Probe
+az network lb probe create \
+  --resource-group MyResourceGroup \
+  --lb-name MyLB \
+  --name MyHealthProbe \
+  --protocol tcp \
+  --port 80 \
+  --interval 15 \
+  --threshold 3
+
+## Create Load Balancer Rule
+az network lb rule create \
+  --resource-group MyResourceGroup \
+  --lb-name MyLB \
+  --name MyHTTPRule \
+  --protocol Tcp \
+  --frontend-port 80 \
+  --backend-port 80 \
+  --backend-pool-name MyBackendPool \
+  --probe-name MyHealthProbe
